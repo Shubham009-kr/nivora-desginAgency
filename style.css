@@ -1,0 +1,207 @@
+@font-face {
+    font-family: "Cafe Lumen";
+    src: url("./MBF\ Cafe\ Lumen.otf");
+}
+
+@font-face {
+    font-family: "Vonca";
+    src: url("./vonca-regular.otf");
+}
+
+@font-face {
+    font-family: "Suisse";
+    src: url("./SuisseIntl-Regular.woff2");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Suisse";
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: aqua;
+    /* overflow-y: hidden; */
+}
+
+#cursor{
+    height: 6vw;
+    width: 6.5vw;
+    background-color: #ff5f38;
+    color: #000;
+    background-blend-mode: screen;
+    border-radius: 15% 60%;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+
+#cursor h5{
+    font-size: 1.2vw;
+    font-family: "Vonca";
+}
+
+#page1 video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#page1-content{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Vonca";
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2vw 3vw;
+    font-family: "Vonca";
+    /* background-color: #ff5f38; */
+}
+
+nav h3{
+    font-size: 2vw;
+    font-weight: 800;
+    font-family: "Vonca";
+}
+
+nav>h4{
+    font-size: 1.5vw;
+    font-weight: 800;
+    font-family: "Vonca";
+}
+
+.fixed{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+
+.fixed h3{
+    font-size: 2vw;
+    position: sticky;
+    top: 0px;
+    /* opacity: 0; */
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2vw;
+}
+
+.menu h4{
+    font-family: "Vonca";
+    padding-left: 1vw;
+    font-size: 1.2vw;
+    /* opacity: 0; */
+}
+
+#page1-content>h5{
+    font-size: 3vw;
+    color: #fff;
+    mix-blend-mode: screen;
+    font-family: "Vonca";
+}
+
+#page1-content h1{
+    font-family: "Cafe Lumen";
+    font-size: 25vw;
+    font-weight: 700;
+    /* color: aqua; */
+    /* line-height: 25vw; */
+}
+#page1-content h1 span{
+    font-family: "Cafe Lumen";
+}
+
+#page2{
+    height: 100vh;
+}
+
+.upper-part{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 3vh 3vw;
+    margin-top: 3vh;
+}
+
+.upper-part h1{
+    font-weight: 500;
+    font-size: 2.2rem;
+}
+
+.middle-part{
+    padding: 3vh 3vw;
+    border-top: 1px solid #0d0d0d;
+    border-bottom: 1px solid #0d0d0d;
+    text-align: center;
+}
+
+.middle-part p{
+    margin: 4vh 0;
+    font-size: 3rem;
+}
+
+.lower-part{
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 3vw;
+}
+
+.lower-left{
+    width: 50%;
+}
+
+.lower-left h2{
+    font-weight: 500;
+}
+
+.lower-right{
+    width: 20%;
+    margin-right: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 2vh;
+}
+
+.lower-right p{
+    width: 80%;
+    padding-bottom: 4vh;
+}
+
+#page3 {
+    height: 100vh;
+}
+
+
