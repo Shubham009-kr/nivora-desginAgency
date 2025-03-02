@@ -144,7 +144,8 @@ nav>h4{
 }
 
 #page2{
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .upper-part{
@@ -155,9 +156,15 @@ nav>h4{
     margin-top: 3vh;
 }
 
+.upper-left{
+    overflow: hidden;
+    border: 1px solid #0d0d0d;
+}
+
 .upper-part h1{
     font-weight: 500;
     font-size: 2.2rem;
+    /* line-height: 1.2; */
 }
 
 .middle-part{
@@ -198,10 +205,74 @@ nav>h4{
 .lower-right p{
     width: 80%;
     padding-bottom: 4vh;
+    background-color: #ff5f38;
 }
 
 #page3 {
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 3vw;
 }
 
+.page3-top{
+    text-align: center;
+}
+
+.page3-top h4{
+    margin-bottom: 1vw;
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+.page3-top h4 span{
+    font-size: 0.8vw;
+    background-color: #0d0d0d;
+    color: #fff;
+    border-radius: 60%;
+    padding: .4vw;
+}
+
+.page3-top h2{
+    /* margin-bottom: 1vw; */
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.page3-elements{
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 17vh;
+}
+
+.page3-elements .box{
+    height: 100%;
+    width: 32%;
+    position: relative;
+    
+}
+
+.page3-elements .box video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2%;
+}
+
+.page3-elements .box img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-radius: 2%;
+}
+
+.page3-elements .box:hover img {
+    opacity: 0;
+}
 

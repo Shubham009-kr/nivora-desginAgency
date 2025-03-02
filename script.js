@@ -90,12 +90,31 @@ gsap.from(".fixed>h3",{
             scroller: "#main",
             start: "top 47%",
             end: "top 60%",
-            markers: true,
+            // markers: true,
             scrub: 2,
             
         }
 
 })
+
+
+// var tl = gsap.timeline({
+//         scrollTrigger:{
+//             trigger:"#page2",
+//             scroller:"#main",
+//             start:"top 40%",
+//             end:"top -20%",
+//             scrub:2,
+//             markers:"true",
+//         }
+//     }) 
+
+// tl.from(".up-ul-text", {
+//     y:-130,
+//     duration:1,
+//     // delay:1,
+// })
+
 
 
 
