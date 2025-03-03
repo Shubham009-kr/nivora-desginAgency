@@ -276,3 +276,49 @@ nav>h4{
     opacity: 0;
 }
 
+.page3-elements-lowerVid{
+    height: 110vh;
+    width: 100%;
+}
+
+.low-vid video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2%;
+    margin-top: 4vh;
+}
+
+.page3-lower-text{
+    margin-top: 10vh;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.page3-lower-top-text{
+    width: 30%;
+    height: 100%;
+    border-right: 2px solid #0d0d0d;
+}
+
+.page3-lower-top-text h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.page3-lower-bottom-text{
+    width: 70%;
+    height: 100%;
+    padding-left: 2vw;
+}
+
+.page3-lower-bottom-text p{
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
