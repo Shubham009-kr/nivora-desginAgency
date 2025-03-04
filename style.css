@@ -158,7 +158,6 @@ nav>h4{
 
 .upper-left{
     overflow: hidden;
-    border: 1px solid #0d0d0d;
 }
 
 .upper-part h1{
@@ -177,6 +176,11 @@ nav>h4{
 .middle-part p{
     margin: 4vh 0;
     font-size: 3rem;
+}
+
+.pag2-middle-text span{
+    align-items: center;
+    letter-spacing: 0mm;
 }
 
 .lower-part{
@@ -286,7 +290,7 @@ nav>h4{
     width: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 2%;
+    border-radius: 1%;
     margin-top: 4vh;
 }
 

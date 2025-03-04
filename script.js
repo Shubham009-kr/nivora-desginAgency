@@ -30,6 +30,8 @@ function locomotiveScroll(){
 
 
 }
+locomotiveScroll()
+
 function cursorEffect(){
     var page1Content = document.querySelector("#page1-content");
     var cursor = document.querySelector("#cursor");
@@ -58,21 +60,6 @@ function cursorEffect(){
     })
 }
 
-function page2Animation(){
-    gsap.from(".elem h1",{
-        y: 120,
-        stagger: 0.2,
-        duration: 1,
-        scrollTrigger: {
-            trigger: "#page2",
-            scroller: "#main",
-            start: "top 47%",
-            end: "top 46%",
-            scrub: 2
-        }
-    })
-}
-
 gsap.from(".temp",{
     y: -45,
     opacity: 1,
@@ -80,60 +67,54 @@ gsap.from(".temp",{
     duration: 0.8,
 })
 
-gsap.from(".fixed>h3",{
-    y: -45,
-    opacity: 1,
-    stagger: .2,
-    duration: 4,
-    scrollTrigger: {
-            trigger: "#page2",
+function page2Animation(){
+    gsap.from(".upper-left h1, .upper-right h1", {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        skewY:12,
+        stagger:.2,
+        scrollTrigger: {
+            trigger: "#page2",     // The section to watch
+            start: "top 70%",      // When #page2's top reaches 50% of viewport
+            end: "top 40%",        // (Optional) Helps refine the trigger
             scroller: "#main",
-            start: "top 47%",
-            end: "top 60%",
-            // markers: true,
-            scrub: 2,
-            
+            markers: true,         // Debugging: Shows start/end points (REMOVE in production)
+            toggleActions: "play none none none",
+            scrub: false,          // Ensures animation plays once without scrubbing
+            // once: true             // Ensures it runs only once
         }
+    });
 
-})
+    var clutter ="";
+    document.querySelector(".pag2-middle-text").textContent.split("").forEach(function(e){
+        if(e === " ")clutter += `<span>&nbsp;</span>`
+        clutter += `<span>${e}</span>`
+    })
+    document.querySelector(".pag2-middle-text").innerHTML = clutter;
 
-
-// var tl = gsap.timeline({
-//         scrollTrigger:{
-//             trigger:"#page2",
-//             scroller:"#main",
-//             start:"top 40%",
-//             end:"top -20%",
-//             scrub:2,
-//             markers:"true",
-//         }
-//     }) 
-
-// tl.from(".up-ul-text", {
-//     y:-130,
-//     duration:1,
-//     // delay:1,
-// })
+    console.log(clutter)
 
 
+    gsap.set(".pag2-middle-text span", {opacity: .1})
+    gsap.to(".pag2-middle-text span", {
+        scrollTrigger:{
+            trigger:"#page2",
+            start: "top 60%",
+            end: "top 20%",
+            scrub: 2,
+            scroller: "#main",
+            // markers:true,
+        },
+        opacity: 1,
+        stagger: .03,
+        ease: Power4,
+    })
+}
 
-
-// gsap.from("nav h3, h4",{
-//     y: -45,
-//     opacity: 1,
-//     stagger: 0.2,
-//     duration: 0.8,
-//     scrollTrigger: {
-//             trigger: "#page1",
-//             scroller: "#main",
-//             start: "top 10%",
-//             end: "top 46%",
-//             markers: true,
-//             scrub: 2
-//         }
-// })
+    
 
 cursorEffect()
-locomotiveScroll()
 page2Animation()
 
