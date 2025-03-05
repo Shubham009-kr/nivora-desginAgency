@@ -105,12 +105,44 @@ function page2Animation(){
             end: "top 20%",
             scrub: 2,
             scroller: "#main",
-            // markers:true,
         },
         opacity: 1,
         stagger: .03,
         ease: Power4,
     })
+
+
+    gsap.from(".lower-left h2", {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        skewY:12,
+        scrollTrigger: {
+            trigger: "#page2",     
+            start: "bottom 140%",      
+            end: "bottom 60%",        
+            scroller: "#main",        
+            scrub: 2,          
+        }
+    });
+
+
+    gsap.from(".lower-right p", {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        skewY:12,
+        stagger:.2,
+        scrollTrigger: {
+            trigger: "#page2",     
+            start: "bottom 140%",      
+            end: "bottom 30%",        
+            scroller: "#main",        
+            scrub: 2,          
+        }
+    });
 }
 
     
