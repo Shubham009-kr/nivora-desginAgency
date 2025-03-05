@@ -145,6 +145,77 @@ function page2Animation(){
     });
 }
 
+    gsap.from(".page3-top h4, .page3-top h2", {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scale:.2,
+        // skewY:12,
+        stagger:.2,
+        scrollTrigger: {
+            trigger: "#page3",     
+            start: "top 70%",      
+            end: "top 40%",        
+            scroller: "#main",        
+            scrub: 2,          
+        }
+    });
+
+    gsap.from("#box1", {
+        y: 100,
+        x:600,
+        opacity: .5,
+        duration: 1.2,
+        ease: "power3.out",
+        scale:.1,
+        // skewY:12,
+        stagger:.2,
+        scrollTrigger: {
+            trigger: "#page3",     
+            start: "top 60%",      
+            end: "top 10%",        
+            scroller: "#main",        
+            scrub: 2,          
+        }
+    });
+
+    gsap.from("#box2", {
+        y: 100,
+        // x:600,
+        opacity: .5,
+        duration: 1.2,
+        ease: "power3.out",
+        scale:.1,
+        // skewY:12,
+        stagger:.2,
+        scrollTrigger: {
+            trigger: "#page3",     
+            start: "top 60%",      
+            end: "top 10%",        
+            scroller: "#main",        
+            scrub: 2,          
+        }
+    });
+
+    gsap.from("#box3", {
+        y: 100,
+        x:-600,
+        opacity: .5,
+        duration: 1.2,
+        ease: "power3.out",
+        scale:.1,
+        // skewY:12,
+        stagger:.2,
+        scrollTrigger: {
+            trigger: "#page3",     
+            start: "top 60%",      
+            end: "top 10%",        
+            scroller: "#main",        
+            scrub: 2,          
+        }
+    });
+
     
 
 cursorEffect()
