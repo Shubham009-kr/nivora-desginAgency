@@ -145,13 +145,13 @@ function page2Animation(){
     });
 }
 
+function page3Anim(){
     gsap.from(".page3-top h4, .page3-top h2", {
         y: 100,
         opacity: 0,
         duration: 1.2,
         ease: "power3.out",
         scale:.2,
-        // skewY:12,
         stagger:.2,
         scrollTrigger: {
             trigger: "#page3",     
@@ -169,7 +169,6 @@ function page2Animation(){
         duration: 1.2,
         ease: "power3.out",
         scale:.1,
-        // skewY:12,
         stagger:.2,
         scrollTrigger: {
             trigger: "#page3",     
@@ -182,12 +181,11 @@ function page2Animation(){
 
     gsap.from("#box2", {
         y: 100,
-        // x:600,
-        opacity: .5,
+        opacity: .2,
         duration: 1.2,
         ease: "power3.out",
         scale:.1,
-        // skewY:12,
+        delay:.5,
         stagger:.2,
         scrollTrigger: {
             trigger: "#page3",     
@@ -201,11 +199,11 @@ function page2Animation(){
     gsap.from("#box3", {
         y: 100,
         x:-600,
-        opacity: .5,
+        opacity: .2,
         duration: 1.2,
         ease: "power3.out",
         scale:.1,
-        // skewY:12,
+        delay:.5,
         stagger:.2,
         scrollTrigger: {
             trigger: "#page3",     
@@ -215,9 +213,11 @@ function page2Animation(){
             scrub: 2,          
         }
     });
+}    
 
     
 
 cursorEffect()
 page2Animation()
+page3Anim()
 
