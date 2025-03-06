@@ -60,6 +60,65 @@ function cursorEffect(){
     })
 }
 
+function navbarAnim(){
+    gsap.to(".navbar", {
+    scrollTrigger: {
+        trigger: "#page1",
+        scroller: "#main",
+        start: "bottom top",   // When hero section fully scrolls out
+        end: "bottom top",
+        scrub: true,
+        onEnter: () => document.querySelector(".navbar").classList.add("fixed-navbar"),
+        onLeaveBack: () => document.querySelector(".navbar").classList.remove("fixed-navbar")
+        },
+    });
+
+    var navInnerElems = document.querySelectorAll(".menu h4");
+
+    navInnerElems.forEach(function (elem) {
+    elem.addEventListener("mouseenter", function () {
+        gsap.to(elem, {
+            y: -2, // Slight lift effect
+            textShadow: "0px 5px 10px rgba(0, 0, 0, 0.2)", // Drop shadow
+            // filter: "blur(2px)", // Slight blur effect
+            duration: 0.3,
+            ease: "power3.out",
+        });
+
+        let underline = document.createElement("span");
+        underline.classList.add("underline-effect");
+        elem.appendChild(underline);
+
+        gsap.fromTo(
+            underline,
+            { width: "0%" }, 
+            { width: "100%", duration: 0.4, ease: "power3.out" }
+        );
+    });
+
+    elem.addEventListener("mouseleave", function () {
+        gsap.to(elem, {
+            y: 0,
+            textShadow: "none",
+            filter: "blur(0px)",
+            duration: 0.3,
+            ease: "power3.out",
+        });
+
+        let underline = elem.querySelector(".underline-effect");
+        if (underline) {
+            gsap.to(underline, {
+                width: "0%",
+                duration: 0.3,
+                ease: "power3.out",
+                onComplete: () => underline.remove(),
+                });
+            }
+        });
+    });
+
+}
+
 gsap.from(".temp",{
     y: -45,
     opacity: 1,
@@ -94,9 +153,6 @@ function page2Animation(){
     })
     document.querySelector(".pag2-middle-text").innerHTML = clutter;
 
-    console.log(clutter)
-
-
     gsap.set(".pag2-middle-text span", {opacity: .1})
     gsap.to(".pag2-middle-text span", {
         scrollTrigger:{
@@ -110,7 +166,6 @@ function page2Animation(){
         stagger: .03,
         ease: Power4,
     })
-
 
     gsap.from(".lower-left h2", {
         y: 100,
@@ -126,7 +181,6 @@ function page2Animation(){
             scrub: 2,          
         }
     });
-
 
     gsap.from(".lower-right p", {
         y: 100,
@@ -236,10 +290,6 @@ function page3Anim(){
         clutter += `<span>${e}</span>`
     })
     document.querySelector(".page3-lower-bottom-text-para").innerHTML = clutter;
-
-    console.log(clutter)
-
-
     gsap.set(".page3-lower-bottom-text-para span", {opacity: .1})
     gsap.to(".page3-lower-bottom-text-para span", {
         scrollTrigger:{
@@ -255,9 +305,8 @@ function page3Anim(){
     })
 }    
 
-    
-
 cursorEffect()
+navbarAnim()
 page2Animation()
 page3Anim()
 
