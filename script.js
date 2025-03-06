@@ -213,6 +213,46 @@ function page3Anim(){
             scrub: 2,          
         }
     });
+
+    gsap.from(".page3-lower-top-text h2", {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        skewY:12,
+        stagger:.2,
+        scrollTrigger: {
+            trigger: "#page3",     
+            start: "bottom 180%",      
+            end: "bottom 60%",        
+            scroller: "#main",        
+            scrub: 2,          
+        }
+    });
+
+    var clutter ="";
+    document.querySelector(".page3-lower-bottom-text-para").textContent.split("").forEach(function(e){
+        if(e === " ")clutter += `<span>&nbsp;</span>`
+        clutter += `<span>${e}</span>`
+    })
+    document.querySelector(".page3-lower-bottom-text-para").innerHTML = clutter;
+
+    console.log(clutter)
+
+
+    gsap.set(".page3-lower-bottom-text-para span", {opacity: .1})
+    gsap.to(".page3-lower-bottom-text-para span", {
+        scrollTrigger:{
+            trigger:"#page3",
+            start: "bottom 180%",      
+            end: "bottom 100%",  
+            scrub: 2,
+            scroller: "#main",
+        },
+        opacity: 1,
+        stagger: .03,
+        ease: Power4,
+    })
 }    
 
     
