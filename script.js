@@ -119,6 +119,45 @@ function navbarAnim(){
 
 }
 
+function loaderAnim(){
+    var tl = gsap.timeline();
+    tl.from(".loader h3",{
+        x:70,
+        opacity:0,
+        duration:1.2,
+        stagger:0.1,
+        ease: "power3.out",
+    })
+
+    tl.to(".loader h3",{
+        x:-40,
+        opacity:0,
+        duration:1,
+        stagger:0.1,
+        ease: "power3.out",
+    })
+
+    tl.to(".loader",{
+        opacity:0,
+        ease: "power3.out",
+    })
+
+    tl.from("#page1-content h1 span",{
+        y:100,
+        opacity:0,
+        stagger:0.1,
+        duration:0.5,
+        delay:-0.5,
+        ease: "power3.out",
+    })
+
+    tl.to(".loader",{
+        display:"none",
+        ease: "power3.out",
+    })
+
+}
+
 gsap.from(".temp",{
     y: -45,
     opacity: 1,
@@ -315,8 +354,10 @@ var swiper = new Swiper(".mySwiper", {
       },
     });
 
+
 cursorEffect()
 navbarAnim()
+loaderAnim()
 page2Animation()
 page3Anim()
 
