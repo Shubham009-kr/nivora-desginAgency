@@ -353,3 +353,69 @@ nav>h4{
     line-height: 1.1;
 }
 
+#page4{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page4 video{
+    height: 100%;
+}
+
+#page4 svg{
+    position: absolute;
+    height: 60%;
+}
+
+#page5{
+    height: 100vh;
+    width: 100%;
+    padding: 3vh 0vw;
+    position: relative;
+}
+
+.page5-top h1{
+    font-size: 6rem;
+    font-family: "Cafe Lumen";
+    font-weight: 700;
+    margin-left: 3%;
+    width: 93.5%;
+    border-bottom: 1.2px solid #0d0d0d;
+}
+
+.swiperDiv{
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    margin-top: -5%;
+    /* background-color: rebeccapurple; */
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 18%;
+    object-fit: cover;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
