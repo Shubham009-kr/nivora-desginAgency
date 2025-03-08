@@ -376,22 +376,41 @@ function page5Anim(){
     })
 }
 
-let rivian = document.querySelector(".page6-p1-text-block h1");
-console.log(rivian)
-rivian.addEventListener("mouseenter", function(){
-    gsap.to(rivian,{
-        y:-55,
-        duration:.4,
-    })
-})
-rivian.addEventListener("mouseleave", function(){
-    gsap.to(rivian,{
-        y:0,
-        duration:.4,
-    })
-})
+function page6Anim(){
+    let rivian = document.querySelectorAll(".page6-p1-text-block h1");
+    rivian.forEach(function(elem){
+        elem.addEventListener("mouseenter", function(){
+        gsap.to(elem,{
+            y:-55,
+            duration:.4,
+            })
+        })
 
+        elem.addEventListener("mouseleave", function(){
+            gsap.to(elem,{
+                y:0,
+                duration:.4,
+            })
+        })
+    })
 
+    let workBlocks = document.querySelectorAll(".page6-part1");
+    workBlocks.forEach(function(elem){
+        gsap.to(elem, {
+            opacity: 1,
+            duration: 1.2,
+            ease: "power3.out",
+            scale:1.5,
+            scrollTrigger: {
+                trigger: "#page6",     
+                start: "top 60%",      
+                end: "bottom top",        
+                scroller: "#main",        
+                scrub: 2,          
+            }
+        });
+    })
+}
 
 cursorEffect()
 navbarAnim()
@@ -399,4 +418,5 @@ loaderAnim()
 page2Animation()
 page3Anim()
 page5Anim()
+page6Anim()
 
