@@ -342,9 +342,10 @@ function page3Anim(){
         stagger: .03,
         ease: Power4,
     })
-}    
+}   
 
-var swiper = new Swiper(".mySwiper", {
+function page5Anim(){
+    var swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,
       spaceBetween: 30,
       loop: true,
@@ -354,10 +355,48 @@ var swiper = new Swiper(".mySwiper", {
       },
     });
 
+    let imgBlock = document.querySelectorAll(".page5-svg-block img");
+
+    imgBlock.forEach(function(elem){
+        console.log(elem)
+        
+        elem.addEventListener("mouseenter",function(){
+            gsap.to(elem,{
+                scale:1.5,
+                duration:.8,
+            })
+        })
+
+        elem.addEventListener("mouseleave",function(){
+            gsap.to(elem,{
+                scale:1,
+                duration:.8,
+            })
+        })
+    })
+}
+
+let rivian = document.querySelector(".page6-p1-text-block h1");
+console.log(rivian)
+rivian.addEventListener("mouseenter", function(){
+    gsap.to(rivian,{
+        y:-55,
+        duration:.4,
+    })
+})
+rivian.addEventListener("mouseleave", function(){
+    gsap.to(rivian,{
+        y:0,
+        duration:.4,
+    })
+})
+
+
 
 cursorEffect()
 navbarAnim()
 loaderAnim()
 page2Animation()
 page3Anim()
+page5Anim()
 
