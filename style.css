@@ -504,4 +504,183 @@ nav>h4{
     mix-blend-mode: difference;
 }
 
+#page7{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.page7-top-text{
+    margin-top: 10vh;
+    padding: 10vh 3vw;
+    height: 50vh;
+    width: 100%;
+    position: relative;
+}
+
+.page7-top-text p{
+    font-size: 3rem;
+    font-family: "Suisse";
+}
+
+.page7-second-text{
+    padding: 3vh 3vw;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+.second-text-left{
+    width: 35%;
+}
+
+.second-text-right{
+    width: 65%;
+    padding: 0vh 18vw;
+    
+}
+
+.page7-second-text h3{
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: "Suisse";
+}
+
+.page7-second-text p{
+    font-size: 1rem;
+    font-family: "Suisse";
+    padding-top: 5vh;
+}
+
+#page8 {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.page8-top-text{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 40vh;
+    width: 100%;
+    position: relative;
+}
+
+.page8-top-left {
+    padding: 0vh 3vw;
+    padding-left: 4vw;
+}
+
+.page8-top-left span{
+    font-size: 12rem;
+    height: 100%;
+    width: 70%;
+    font-weight: 600;
+    font-family: "Vonca";
+}
+
+.page8-top-right h1{
+    width: 20%;
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: "Vonca";
+    padding-right: 5vw;
+}
+
+.page8-bottom-text{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3vh 3vw;
+}
+
+.page8-bottom-text h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: "Suisse";
+}
+
+#page9{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page9-vid-div{
+    height: 95%;
+    width: 95%;
+    /* padding: 3vh 3vw; */
+}
+
+.page9-vid-div video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page10{
+    height: 130vh;
+    width: 100%;
+    position: relative;
+    padding: 3vh 0vw;
+}
+
+.page10-top-text{
+    height: 35vh;
+    width: 100%;
+    padding: 5vh 3vw;
+}
+
+.page10-top-text p{
+    font-size: 3rem;
+    font-family: "Suisse";
+
+}
+
+.page10-team{
+    height: 100vh;
+    width: 100%;
+}
+
+.page10-team h1 {
+    font-size: 6rem;
+    font-family: "Cafe Lumen";
+    font-weight: 700;
+    margin-left: 3%;
+    width: 93.5%;
+    border-bottom: 1.2px solid #0d0d0d;
+    margin-top: 15vh;
+}
+
+.page10-team .swiperDiv {
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    margin-top: 2%;
+    /* background-color: rebeccapurple; */
+}
+
+.page10-team .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
 
