@@ -467,7 +467,7 @@ function page7Anim(){
 }
 
 function page8Anim(){
-        var tl = gsap.timeline();
+    var tl = gsap.timeline();
     tl.from(".page8-top-left h1 span",{
         scrollTrigger:{
             trigger:"#page8",
@@ -517,10 +517,45 @@ function page8Anim(){
     });
 }
 
+function page9_10Anim(){
+    var tl = gsap.timeline();
+    tl.from(".page9-vid-div video",{
+        scrollTrigger:{
+            trigger:"#page9",
+            start: "top 80%",
+            end: "top 20%",
+            scrub: 2,
+            scroller: "#main",
+        },
+        y:100,
+        scale:0.2,
+        opacity:0,
+        stagger:0.1,
+        duration:0.5,
+        ease: "power3.out",  
+    })
 
+    var clutter ="";
+    document.querySelector(".page10-top-text-para").textContent.split("").forEach(function(e){
+        if(e === " ")clutter += `<span>&nbsp;</span>`
+        clutter += `<span>${e}</span>`
+    })
+    document.querySelector(".page10-top-text-para").innerHTML = clutter;
 
-
-
+    gsap.set(".page10-top-text-para span", {opacity: .1})
+    gsap.to(".page10-top-text-para span", {
+        scrollTrigger:{
+            trigger:"#page10",
+            start: "top 70%",
+            end: "top 40%",
+            scrub: 2,
+            scroller: "#main",
+        },
+        opacity: 1,
+        stagger: .03,
+        ease: Power4,
+    })
+}
 
 cursorEffect()
 navbarAnim()
@@ -531,4 +566,5 @@ page5Anim()
 page6Anim()
 page7Anim()
 page8Anim()
+page9_10Anim()
 

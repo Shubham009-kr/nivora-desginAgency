@@ -217,7 +217,6 @@ nav>h4{
 .upper-part h1{
     font-weight: 500;
     font-size: 2.2rem;
-    /* line-height: 1.2; */
 }
 
 .middle-part{
@@ -417,7 +416,6 @@ nav>h4{
     width: 100%;
     position: relative;
     margin-top: -5%;
-    /* background-color: rebeccapurple; */
 }
 
 .swiper {
@@ -585,7 +583,6 @@ nav>h4{
 
 .page8-top-left {
     padding: 0vh 3vw;
-    /* padding-left: 4vw; */
 }
 
 .page8-top-left h1{
@@ -612,7 +609,6 @@ nav>h4{
     font-size: 3rem;
     font-weight: 400;
     font-family: "Vonca";
-    /* padding-right: 5vw; */
 }
 
 .page8-bottom-text{
@@ -641,13 +637,13 @@ nav>h4{
 .page9-vid-div{
     height: 95%;
     width: 95%;
-    /* padding: 3vh 3vw; */
 }
 
 .page9-vid-div video{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    scale: 1.2;
 }
 
 #page10{
@@ -661,12 +657,12 @@ nav>h4{
     height: 35vh;
     width: 100%;
     padding: 5vh 3vw;
+    padding-top: 12vh;
 }
 
 .page10-top-text p{
     font-size: 3rem;
     font-family: "Suisse";
-
 }
 
 .page10-team{
@@ -689,7 +685,6 @@ nav>h4{
     width: 100%;
     position: relative;
     margin-top: 2%;
-    /* background-color: rebeccapurple; */
 }
 
 .page10-team .swiper-slide {
