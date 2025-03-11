@@ -412,6 +412,116 @@ function page6Anim(){
     })
 }
 
+function page7Anim(){
+    var clutter ="";
+    document.querySelector(".page7-top-text-para").textContent.split("").forEach(function(e){
+        if(e === " ")clutter += `<span>&nbsp;</span>`
+        clutter += `<span>${e}</span>`
+    })
+    document.querySelector(".page7-top-text-para").innerHTML = clutter;
+
+    gsap.set(".page7-top-text-para span", {opacity: .1})
+    gsap.to(".page7-top-text-para span", {
+        scrollTrigger:{
+            trigger:"#page7",
+            start: "top 60%",
+            end: "top 20%",
+            scrub: 2,
+            scroller: "#main",
+        },
+        opacity: 1,
+        stagger: .03,
+        ease: Power4,
+    })
+
+    gsap.from(".second-text-left h3", {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        skewY:12,
+        scrollTrigger: {
+            trigger: "#page7",     
+            start: "bottom 140%",      
+            end: "bottom 60%",        
+            scroller: "#main",        
+            scrub: 2,          
+        }
+    });
+
+    gsap.from(".right-list h3, .right-para p", {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        skewY:12,
+        stagger:.2,
+        scrollTrigger: {
+            trigger: "#page7",     
+            start: "bottom 140%",      
+            end: "bottom 30%",        
+            scroller: "#main",        
+            scrub: 2,          
+        }
+    });
+}
+
+function page8Anim(){
+        var tl = gsap.timeline();
+    tl.from(".page8-top-left h1 span",{
+        scrollTrigger:{
+            trigger:"#page8",
+            start: "top 70%",
+            end: "top 30%",
+            scrub: 2,
+            scroller: "#main",
+        },
+        y:100,
+        opacity:0,
+        stagger:0.1,
+        duration:0.5,
+        delay:-0.5,
+        ease: "power3.out",  
+    })
+
+    tl.from(".page8-top-right h1",{
+        scrollTrigger:{
+            trigger:"#page8",
+            start: "top 70%",
+            end: "top 30%",
+            scrub: 2,
+            scroller: "#main",
+        },
+        y:100,
+        opacity:0,
+        stagger:0.1,
+        duration:0.5,
+        delay:-0.5,
+        ease: "power3.out",  
+    })
+
+    gsap.from(".page8-second-text-left h3, .page8-right-list h3", {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        skewY:12,
+        stagger:.2,
+        scrollTrigger: {
+            trigger: "#page8",     
+            start: "bottom 140%",      
+            end: "bottom 80%",        
+            scroller: "#main",        
+            scrub: 2,          
+        }
+    });
+}
+
+
+
+
+
+
 cursorEffect()
 navbarAnim()
 loaderAnim()
@@ -419,4 +529,6 @@ page2Animation()
 page3Anim()
 page5Anim()
 page6Anim()
+page7Anim()
+page8Anim()
 

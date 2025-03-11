@@ -527,6 +527,11 @@ nav>h4{
     font-family: "Suisse";
 }
 
+.page7-top-text-para span {
+    align-items: center;
+    letter-spacing: 0mm;
+}
+
 .page7-second-text{
     padding: 3vh 3vw;
     height: 40vh;
@@ -580,23 +585,34 @@ nav>h4{
 
 .page8-top-left {
     padding: 0vh 3vw;
-    padding-left: 4vw;
+    /* padding-left: 4vw; */
 }
 
-.page8-top-left span{
-    font-size: 12rem;
+.page8-top-left h1{
+    font-size: 10rem;
     height: 100%;
-    width: 70%;
+    width: 100%;
     font-weight: 600;
     font-family: "Vonca";
+    letter-spacing: -10px;
+}
+
+.page8-top-left h1 span{
+    display: inline-block;
+    font-family: "Vonca";
+}
+
+.page8-top-right{
+    height: 100%;
+    width: 10%;
 }
 
 .page8-top-right h1{
-    width: 20%;
+    width: 10%;
     font-size: 3rem;
     font-weight: 400;
     font-family: "Vonca";
-    padding-right: 5vw;
+    /* padding-right: 5vw; */
 }
 
 .page8-bottom-text{
