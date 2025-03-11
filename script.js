@@ -557,6 +557,40 @@ function page9_10Anim(){
     })
 }
 
+function page11Anim(){
+    var tl = gsap.timeline();
+    let page11Text = document.querySelectorAll(".page11-inner-text-box h2");
+
+    page11Text.forEach(function(elem){
+        elem.addEventListener("mouseenter", function(){
+            tl.to(elem, {
+                y:-65,
+                duration:1,
+                ease: "power3.out", 
+                cursor:"pointer"
+            })
+            tl.to(document.querySelector(".page11-below-line"),{
+                width:"40%",
+                duration:1,
+                ease: "power3.out", 
+            })
+        })
+        elem.addEventListener("mouseleave", function(){
+            tl.to(elem, {
+                y:0,
+                duration:1,
+                ease: "power3.out", 
+                cursor:"pointer",
+            })
+            tl.to(document.querySelector(".page11-below-line"),{
+                width:"32%",
+                duration:1,
+                ease: "power3.out", 
+            })
+        })
+    })
+}    
+
 cursorEffect()
 navbarAnim()
 loaderAnim()
@@ -567,4 +601,5 @@ page6Anim()
 page7Anim()
 page8Anim()
 page9_10Anim()
+page11Anim()
 

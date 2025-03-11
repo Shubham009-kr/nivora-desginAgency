@@ -695,3 +695,37 @@ nav>h4{
     align-items: flex-start;
 }
 
+#page11{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.page11-text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 45%;
+}
+
+.page11-inner-text-box{
+    height: 60px;
+    width: 60%;
+    overflow: hidden;
+}
+
+.page11-inner-text-box h2{
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: "Suisse";
+}
+
+.page11-below-line{
+    height: 2px;
+    width: 32%;
+    background-color: #0d0d0d;
+}
+
