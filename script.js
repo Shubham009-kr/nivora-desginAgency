@@ -178,7 +178,6 @@ function page2Animation(){
             start: "top 70%",      // When #page2's top reaches 50% of viewport
             end: "top 40%",        // (Optional) Helps refine the trigger
             scroller: "#main",
-            markers: true,         // Debugging: Shows start/end points (REMOVE in production)
             toggleActions: "play none none none",
             scrub: false,          // Ensures animation plays once without scrubbing
             // once: true             // Ensures it runs only once
@@ -589,7 +588,70 @@ function page11Anim(){
             })
         })
     })
-}    
+} 
+
+function page12Anim(){
+        var tl = gsap.timeline();
+    tl.from(".page12-top-left h1, .form-container h2",{
+        scrollTrigger:{
+            trigger:"footer",
+            start: "top 80%",
+            end: "top 40%",
+            scrub: 2,
+            scroller: "#main",
+        },
+        x:-100,
+        opacity:0,
+        stagger:0.1,
+        duration:0.5,
+        ease: "power3.out",  
+    })
+
+    tl.from(".form-div input, .form-div button",{
+        scrollTrigger:{
+            trigger:"footer",
+            start: "top 70%",
+            end: "top 30%",
+            scrub: 2,
+            scroller: "#main",
+        },
+        x:-100,
+        opacity:0,
+        stagger:0.1,
+        duration:0.5,
+        ease: "power3.out",  
+    })
+
+    tl.from(".page12-top-list h3, .page12-bottom-list h3",{
+        scrollTrigger:{
+            trigger:"footer",
+            start: "top 70%",
+            end: "top 30%",
+            scrub: 2,
+            scroller: "#main",
+        },
+        x:100,
+        opacity:0,
+        stagger:0.1,
+        duration:0.5,
+        ease: "power3.out",  
+    })
+
+    tl.from(".page12-bottom-main-text h1 span",{
+        scrollTrigger:{
+            trigger:"footer",
+            start: "top 40%",
+            end: "top -10%",
+            scrub: 2,
+            scroller: "#main",
+        },
+        x:-100,
+        opacity:0,
+        stagger:0.1,
+        duration:1,
+        ease: "power3.out",
+    })
+}
 
 cursorEffect()
 navbarAnim()
@@ -602,4 +664,5 @@ page7Anim()
 page8Anim()
 page9_10Anim()
 page11Anim()
+page12Anim()
 

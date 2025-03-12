@@ -729,3 +729,112 @@ nav>h4{
     background-color: #0d0d0d;
 }
 
+.page12{
+    height: 100vh;
+    width: 100%;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+.page12-top-main{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.page12-top-left{
+    width: 50%;
+    height: 100%;
+    padding: 12vh 3vw;
+}
+
+.page12-top-left h1{
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-family: "Suisse";
+    padding-bottom: 5vh;
+}
+
+.form-container h2{
+    font-size: 1.2rem;
+    font-family: "Suisse";
+    font-weight: 400;
+    padding-bottom: 2vh;
+}
+
+.form-div{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.form-div input{
+    background-color: #0d0d0d;
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-bottom: 1.5px solid white;
+}
+
+.form-div button{
+    width: 300px;
+    height: 40px;
+    background-color: #0d0d0d;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Suisse";
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.page12-top-right {
+    width: 50%;
+    height: 100%;
+    padding: 8vh 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.page12-top-list, .page12-bottom-list{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 50%;
+}
+
+.page12-top-list h3,
+.page12-bottom-list h3{
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.page12-bottom-main{
+    height: 50vh;
+    width: 100%;
+    align-items: center;
+}
+
+.page12-bottom-main-text{
+    text-align: center;
+
+}
+
+.page12-bottom-main h1 span{
+    font-size: 24rem;
+    font-family: "Cafe Lumen";
+    align-items: center;
+    font-weight: 400;
+}
+
+
