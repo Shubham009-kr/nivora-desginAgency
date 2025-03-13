@@ -6,12 +6,12 @@
 - **Elegant UI/UX** – Minimal, modern, and visually stunning design.
 - **Dynamic Hero Section** – Interactive elements defining expertise and strengths.
 - **Portfolio Showcase** – A curated display of creative work.
-- **Services Section** – Different services we offer.
+- **Services Section** – The types of different services we offer.
 - **Smooth Animations** – GSAP-powered micro-interactions and motion effects with smooth scrolling using locomotive Js.
 
 ## **Tech Stack**
 - **Frontend:** HTML, CSS, JavaScript, Locomotive Js, GSAP
-- **Deployment:** Netlify / GitHub Pages
+- **Deployment:** Netlify 
 
 ## **Getting Started**
 ### **Installation**
