@@ -11,7 +11,7 @@
 
 ## **Tech Stack**
 - **Frontend:** HTML, CSS, JavaScript, Locomotive Js, GSAP
-- **Deployment:** Netlify 
+- **Deployment:** Netlify, AWS
 
 ## **Getting Started**
 ### **Installation**
